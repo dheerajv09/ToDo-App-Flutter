@@ -1,0 +1,1 @@
+ /media/dheeraj/DATA/FLUTTER\ PROJECT/ToDo-App-Flutter/.dart_tool/flutter_gen/gen_l10n/app_localizations_en.dart /media/dheeraj/DATA/FLUTTER\ PROJECT/ToDo-App-Flutter/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /media/dheeraj/DATA/FLUTTER\ PROJECT/ToDo-App-Flutter/l10n.yaml /media/dheeraj/DATA/FLUTTER\ PROJECT/ToDo-App-Flutter/lib/src/localization/app_en.arb
