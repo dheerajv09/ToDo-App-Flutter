@@ -4,16 +4,18 @@ part 'todo_model.g.dart';
 
 @JsonSerializable()
 class Todo {
-  final int id;
+  final int? id;
   final String title;
   @JsonKey(defaultValue: false)
-  final bool isDone;
+  final bool isCompleted;
+  final String datetime;
 
-  const Todo(
+  const Todo({
     this.id,
-    this.title,
-    this.isDone,
-  );
+    required this.title,
+    required this.isCompleted,
+    required this.datetime,
+  });
 
   /// A necessary factory constructor for creating a new User instance
   /// from a map. Pass the map to the generated `_$UserFromJson()` constructor.
@@ -24,4 +26,18 @@ class Todo {
   /// to JSON. The implementation simply calls the private, generated
   /// helper method `_$UserToJson`.
   Map<String, dynamic> toJson() => _$TodoToJson(this);
+
+  Todo copy({
+    int? id,
+    String? title,
+    bool? isCompleted,
+    String? datetime,
+  }) {
+    return Todo(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      isCompleted: isCompleted ?? this.isCompleted,
+      datetime: datetime ?? this.datetime,
+    );
+  }
 }
